@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  service: MyString
+  name: MyString
+  phone: MyString
+  email: MyString
+  postcode: MyString
+  message: MyText
+  gdpr_consent: false
+
+two:
+  service: MyString
+  name: MyString
+  phone: MyString
+  email: MyString
+  postcode: MyString
+  message: MyText
+  gdpr_consent: false

@@ -1,0 +1,49 @@
+<div class="green-background footer">
+  <div class="footer-spacing flex-wrap gap-3 michroma w-100">
+    <div class="hours hours-gap d-flex gap-10 flex-wrap">
+      <div class="walking-hours flex-basis-100 flex-md-basis-33">
+        <h3 class="footer-titles mb-0">WALKING HOURS</h3>
+        <br>
+        <div class="footer-text mt-1">
+          <p>MONDAY TO FRIDAY</p>
+          <p>7:00 am to 8:00 pm</p>
+          <br>
+          <p>SATURDAY</p>
+          <p>9:00 am to 12 noon</p>
+        </div>
+      </div>
+      <div class="office-hours flex-basis-100 flex-md-basis-33">
+        <h2 class="footer-titles mb-0">OFFICE HOURS</h2>
+        <br>
+        <div class="footer-text">
+          <p>MONDAY TO FRIDAY</p>
+          <p>9:00 am to 6:00 pm</p>
+          <br>
+          <p>SATURDAY</p>
+          <p>9:00 am to 12 noon</p>
+          <br>
+          <p>Phone: 07501 006092</p>
+          <p>Email: <a href="mailto:walkwagsco@gmail.com">walkswagsco@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flex-basis-100 flex-md-basis-33">
+      <p class="footer-titles mb-0"><strong>TERMS & POLICIES</strong></p>
+      <br>
+      <p class="footer-text"><%= link_to("Terms and Conditions", terms_path)%></p>
+      <p class="footer-text"><%= link_to("Privacy Policy", privacy_path)%></p>
+      <p class="footer-text"><%= link_to("Weather Protocol", weather_policy_path)%></p>
+    </div>
+    <div class="social-icons flex-basis-100 flex-md-basis-33 d-flex gap-3 justify-content-center">
+      <a href="https://www.facebook.com/share/16M8E5KJS1/?mibextid=wwXlfr" target="_blank" aria-label="Facebook">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/walksandwagsco/profilecard/?igsh=MTJ6dnBrd3hjeDVtdg==" target="_blank" aria-label="Instagram">
+        <i class="fa-brands fa-square-instagram"></i>
+      </a>
+    </div>
+  </div>
+  <div>
+    <%= image_tag "logo-footer.png", alt: "Walks & Wags Co. East London dog walking service logo",loading:"lazy", class: "logo-footer" %>
+  </div>
+</div>

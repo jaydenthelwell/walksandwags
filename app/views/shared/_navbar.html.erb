@@ -1,0 +1,56 @@
+<header class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-end align-items-end align-items-center" style="height: 100%;">
+      <div class="nav-container d-flex justify-content-between align-items-center">
+        <div class="logo-div">
+          <%= link_to root_path do %>
+            <%= image_tag "home_page_logo.png", loading:"lazy", class: "logo", id: "logo-image",
+                          data: { default_src: asset_path("home_page_logo.png"), dark_src: asset_path("dark-green-logo.png"), alt:"Walks & Wags Co. East London dog walking service logo" } %>
+          <% end %>
+          </div>
+        <div class="options gap">
+          <div class="d-none d-md-block">
+            <a href="mailto:walkswagsco@gmail.com" class="d-inline-flex align-items-center gap-2 text-decoration-none navbar-text navbar-options-text navbar-text-color">
+              <i class="fas fa-envelope navbar-email"></i>
+              <span class="navbar-email">walkswagsco@gmail.com</span>
+            </a>
+          </div>
+          <%= link_to("BLOGS", blogs_path, class: "btn navbar-fixed-color navbar-options-text navbar-text navbar-text-color") %>
+          <%= link_to("DOG WALKING GUIDE", dog_walking_guide_path, class: "btn navbar-fixed-color navbar-options-text navbar-text navbar-text-color") %>
+          <%= link_to("SERVICES", services_path, class: "btn navbar-fixed-color navbar-options-text navbar-text navbar-text-color") %>
+          <%= link_to("CONTACT FORM", new_contact_form_path, class: "book-here-button btn navbar-fixed-color navbar-options-text navbar-text navbar-text-color") %>
+        </div>
+        <div class="nav-icons nav-options">
+          <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="d-flex flex-column align-items-start options-text">
+              <%= link_to("HOME", root_path, class: "btn navbar-options-text navbar-text") %>
+              <%= link_to("BLOGS", blogs_path, class: "btn navbar-options-text navbar-text") %>
+              <%= link_to("DOG WALKING GUIDE", dog_walking_guide_path, class: "btn navbar-options-text navbar-text") %>
+              <%= link_to("SERVICES", services_path, class: "btn navbar-options-text navbar-text") %>
+              <%= link_to("CONTACT FORM", new_contact_form_path, class: "btn navbar-options-text navbar-text") %>
+            </div>
+          </div>
+          <div id="main">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+          </div>
+          <script>
+            function openNav() {
+              document.getElementById("mySidebar").style.width = "70%";
+              document.getElementById("main").style.marginLeft = "max-content";
+              document.querySelector(".openbtn").style.opacity = "0";
+              document.querySelector(".alerts").style.opacity = "0";
+            }
+
+            function closeNav() {
+              document.getElementById("mySidebar").style.width = "0";
+              document.getElementById("main").style.marginLeft = "0";
+              document.querySelector(".openbtn").style.opacity = "1";
+              document.querySelector(".alerts").style.opacity = "1";
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

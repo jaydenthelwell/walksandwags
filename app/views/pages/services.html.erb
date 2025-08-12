@@ -1,0 +1,84 @@
+<% content_for :title, "Our Dog Walking Services | Walks & Wags Co." %>
+<% content_for :meta_description, "Explore our dog walking services in East London. We offer both solo and group walks in Wanstead, Leyton, Woodford, Forest Gate, Hackney, and nearby areas. Tailored care for every pup." %>
+<div class="services-container">
+  <%= render 'shared/navbar' %>
+  <section id="section3" class="color-bg" style="background-color: #E8AFC7;">
+    <div class="prices-div">
+      <div class="d-flex justify-content-center flex-column align-items-center">
+        <h1 class="wanstead-wags-title titles prices text-center" style="color: #032B22;">Choose the Pawfect Service</h1>
+        <p class="price-list text-center" style="font-family: Lato, serif, sans-serif !important;">  Choosing the right service for your dog can be tricky, but we’re here to help! Read the descriptions below to find the best option for your furry friend.</p>
+      </div>
+      <div class="services mt-0 gap-5">
+        <div class="d-flex align-items-center services-flex">
+          <div class="service-image-flex">
+            <%= link_to new_contact_form_path do %>
+              <%= image_tag "group_walks.png", loading:"lazy", alt: "Happy group of dogs walking together, ready to enjoy a fun and social adventure in parks, fields, and woodlands.", class: "service-page-images" %>
+            <% end %>
+          </div>
+          <div class="d-flex flex-column align-items-center services-paragraph services-div">
+            <h1 class="font-Abril text service services-description service-name">Group Dog Walks ~ £17.50</h1>
+            <p class="text service services-description services-font services-text">
+              A fun and social experience for dogs who love companionship! Our group walks provide the perfect balance of exercise, enrichment, and socialisation.
+            </p>
+            <ul class="text service services-description services-font services-text">
+              <li><strong>Small, Well-Matched Groups:</strong> Your dog will join a pack of 3-4 friendly, compatible dogs for an engaging and stimulating walk.</li>
+              <li><strong>Exciting Outdoor Adventures:</strong> Walks take place in parks, fields, and woodlands, offering plenty of space to explore and play.</li>
+              <li><strong>Physical & Mental Stimulation:</strong> Group walks encourage social interaction, improve confidence, and reinforce good manners.</li>
+              <li><strong>Safe & Supervised:</strong> Our experienced dog walkers ensure a structured, enjoyable experience where every dog receives the attention they need.</li>
+              <li><strong>Perfect for Social Dogs:</strong> Great for pups who thrive in a pack environment and enjoy making new friends on their daily adventures.</li>
+            </ul>
+            <p class="text service services-description services-font services-text">
+              Let your dog experience the joy of group walks—an excellent way to keep them happy, healthy, and engaged!
+            </p>
+            <%= link_to("BOOK TODAY", new_contact_form_path, class: "mt-3 text-center button") %>
+          </div>
+        </div>
+        <div class="d-flex align-items-center services-flex">
+          <div class="service-image-flex">
+            <%= link_to new_contact_form_path do %>
+              <%= image_tag "solo_walks.png", loading:"lazy", alt: "Golden Retriever standing upright, ready for a peaceful solo walk in nature—perfect for gentle exercise and mental stimulation.", class: "service-page-images" %>
+            <% end %>
+          </div>
+          <div class="d-flex flex-column align-items-center services-paragraph services-div">
+            <h1 class="font-Abril text services-description service service-name">Solo Dog Walks ~ £25</h1>
+            <p class="text service services-description services-font services-text">
+              A peaceful, one-on-one walking experience tailored to your dog's unique needs. These private walks allow them to explore at their own pace, free from distractions or stress.
+            </p>
+            <ul class="text service services-description services-font services-text">
+              <li><strong>Gentle & Relaxing:</strong> A quiet, stress-free walk through woodlands, fields, or along tranquil lakes, perfect for calm exploration.</li>
+              <li><strong>Ideal for Anxious or Nervous Dogs:</strong> Provides a comfortable and safe space for dogs who prefer solitude or struggle with social situations.</li>
+              <li><strong>Perfect for Reactive Dogs:</strong> A controlled environment for dogs who may be reactive to others, ensuring a relaxed and enjoyable experience.</li>
+              <li><strong>Tailored to Health Needs:</strong> Suitable for older dogs, those recovering from injury, or dogs needing a steady, low-impact walk.</li>
+              <li><strong>Personalised Attention:</strong> Your dog gets dedicated care, with the walk adapted to their pace, interests, and personality.</li>
+            </ul>
+            <p class="text services-description service services-font services-text">Whether your dog enjoys a slow stroll or a bit of adventure, our solo walks provide the perfect balance of exercise, enrichment, and relaxation.</p>
+            <%= link_to("BOOK TODAY", new_contact_form_path, class: "mt-3 text-center button") %>
+          </div>
+        </div>
+        <%# <div class="d-flex align-items-center services-flex">
+          <div class="d-flex flex-column align-items-center service services-paragraph services-div">
+            <h1 class="font-Abril text service services-description service-name">Run & Stimulate Package ~ £40</h1>
+            <p class="text service services-description services-font services-text">
+              Perfect for high-energy dogs that need more than just a walk! This package combines intense physical exercise with engaging mental stimulation to provide a well-rounded, satisfying experience.
+            </p>
+            <ul class="text service services-description services-font services-text">
+              <li><strong>45-Minute Run (6-8km):</strong> A fast-paced run to burn off excess energy, improve endurance, and keep your dog fit and healthy.</li>
+              <li><strong>30 Minutes of Brain Games & Training:</strong> Mental exercises, problem-solving activities, and obedience training to challenge your dog's mind and reinforce good behaviour.</li>
+              <li><strong>Perfect for High-Energy Breeds:</strong> Ideal for working breeds, sporting dogs, or any pup that needs extra stimulation beyond a regular walk.</li>
+              <li><strong>One-on-One Attention:</strong> Personalised training and enrichment to match your dog’s specific needs and learning style.</li>
+              <li><strong>Helps Prevent Destructive Behavior:</strong> A well-exercised dog is a happy, well-behaved dog—reducing boredom, restlessness, and unwanted behaviors at home.</li>
+            </ul>
+            <p class="text service services-description services-font services-text">
+              Give your dog the ultimate physical and mental workout with our Run & Stimulate Package—because some dogs just need more!
+            </p>
+          </div>
+          <div class="service-image-flex">
+            <%= link_to new_contact_form_path do %>
+              <%# <%= image_tag "run_walks.png", alt: "Photo of a dog sitting on the living room floor", class: "service-page-images" %>
+            <%# <% end %>
+          <%# </div> %>
+        <%# </div> %>
+      </div>
+    </div>
+  </section>
+</div>

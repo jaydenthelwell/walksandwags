@@ -1,0 +1,147 @@
+<% content_for :title, "#{@post.fields[:title]} | Walks & Wags Co. Dog Walking Blog" %>
+<% content_for :meta_description, "#{@post.fields[:description]}" %>
+
+<div class="post-container">
+  <%= render 'shared/navbar' %>
+  <section id="section2" class="color-bg" style="background-color: #011712;">
+    <div class="banner">
+      <div class="blog-title-signoff">
+        <div class="breadcrumb-container">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="/blogs">Blogs</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="/blogs?category=<%=@post.fields[:category]%>"><%= @post.fields[:category].sub("_", " ").capitalize %></a>
+            </li>
+            <li class="breadcrumb-item active"  aria-current="page">
+              <a href="<%= blogs_post_path(@post.fields[:slug])%>"> <%= @post.fields[:title] %></a>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h1 class="blog-title"><%= @post.fields[:title] %></h1>
+          <p class="sign-off">Written by <%= @post.fields[:written_by] %></p>
+          <p class="sign-off"><%= @post.fields[:date].strftime("%B %d, %Y") %></p>
+        </div>
+      </div>
+      <div class="blog-photo-div">
+        <% if  @post.fields[:blog_image].present? %>
+          <% image_url = "https:" +  @post.fields[:blog_image].url %>
+          <%= image_tag image_url, loading:"lazy", alt: "Featured blog image about dog walking, pet care, and expert tips for happy and healthy dogs.", class: "card-img-top blog-photo" %>
+        <% else %>
+          <%= image_tag "blogs_about_dogs.jpg", loading:"lazy", alt:"Picture of a Chihuaha sticking it's tongue out", class: "w-100 blog-photo" %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <%# <section id="section3" class="color-bg" style="background-color: #E8AFC7;"> %>
+  <div class="blog-section">
+    <div class="blog-intro d-flex flex-column">
+      <h1 class="font-Abril title-blog-section"><%= @post.fields[:subtitle].upcase %></h1>
+      <p class="font-michroma pt-4 blog-intro-text"><%= @post.fields[:description] %></p>
+    </div>
+  </div>
+  <%# </section> %>
+
+  <section id="section4" class="color-bg blog-section-content" style="background-color: #EFEDE7;">
+    <div class="sticky table-of-contents mb-5">
+      <h1 class="font-Abril contents-title text-center" style="font-size: 1.5rem;">TABLE OF CONTENTS</h1>
+      <ul>
+        <% @post.fields[:table_of_contents].each do |post| %>
+          <% sanitized_id = post.parameterize %> <!-- Sanitize header text for use as an ID -->
+          <li class="green-text" style="color: #EFEDE7; margin-bottom: 5px;">
+            <a style="color: #7ad1b3;" href="#<%= sanitized_id %>"><%= post %></a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="green-text post-content font-michroma m-5">
+      <% if @post.fields[:content].present? %>
+        <% content = @post.fields[:content]["content"] %>
+
+        <% if content.is_a?(Array) %>
+          <% content.each do |node| %>
+            <% case node["nodeType"] %>
+            <% when "paragraph" %>
+              <% text = node["content"].map { |text_node| text_node["value"] }.join %>
+              <p><%= text %></p>
+
+            <% when "embedded-asset-block" %>
+              <% asset = node["data"]["target"] %>
+              <% if asset.is_a?(Contentful::Asset) %>
+                <% image_url = asset.file.url %>
+                <% alt_text = asset.title || "Embedded Image" %>
+                <%= image_tag "https:#{image_url}", loading:"lazy", alt: alt_text, class: "content-image" %>
+              <% end %>
+
+            <% when "heading-1", "heading-2", "heading-3", "heading-4", "heading-5", "heading-6" %>
+              <% text = node["content"].map { |text_node| text_node["value"] }.join %>
+              <% sanitized_id = text.parameterize %>
+              <%= content_tag node["nodeType"].gsub("heading-", "h"), text, id: sanitized_id, class: "post-heading" %>
+
+          <% when "unordered-list" %>
+            <ul>
+              <% node["content"].each do |list_item| %>
+                <% Rails.logger.debug "List item content: #{list_item.inspect}" %>  <!-- Log the list item content -->
+
+                <% if list_item["nodeType"] == "list-item" %>
+                  <li>
+                    <%
+                    # Extract the text content from the list item
+                    item_text = list_item["content"].map do |text_node|
+                      Rails.logger.debug "Text node: #{text_node.inspect}"  # Log each text node
+
+                      case text_node["nodeType"]
+                      when "paragraph"
+                        # Handle paragraph content and extract text inside paragraphs
+                        paragraph_text = text_node["content"].map do |child_node|
+                          if child_node["nodeType"] == "text"
+                            Rails.logger.debug "Paragraph Text: #{child_node['value']}" # Log paragraph text
+                            child_node["value"]
+                          else
+                            ""
+                          end
+                        end.join
+                        paragraph_text
+                      when "hyperlink"
+                        link_text = text_node["content"].map { |child_node| child_node["value"] }.join
+                        link_url = text_node["data"]["uri"]
+                        # Log hyperlink content
+                        Rails.logger.debug "Hyperlink: #{link_text}, URL: #{link_url}"
+                        "<a href='#{link_url}'>#{link_text}</a>"
+                      else
+                        ""
+                      end
+                    end.join
+
+                    Rails.logger.debug "Item Text: #{item_text}"  # Log the final text content of the list item
+                    %>
+                    <%= item_text.html_safe %>  <!-- Render text content safely -->
+                  </li>
+                <% end %>
+              <% end %>
+            </ul>
+
+
+            <% end %>
+          <% end %>
+        <% else %>
+          <p>Content format is not as expected.</p>
+        <% end %>
+      <% else %>
+        <p>No content available.</p>
+      <% end %>
+    </div>
+  </section>
+  <div class="blog-section">
+    <div class="blog-intro d-flex flex-column">
+      <h1 class="font-Abril title-blog-section">THANK YOU FOR READING</h1>
+      <p class="font-michroma pt-4 blog-intro-text"><%= @post.fields[:final_thoughts] %></p>
+    </div>
+  </div>
+</div>

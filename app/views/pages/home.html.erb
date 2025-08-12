@@ -1,0 +1,181 @@
+<% content_for :title, "Walks & Wags Co. | Trusted Dog Walking Services in East London" %>
+<% content_for :meta_description, "Looking for professional and caring dog walkers? Walks & Wags Co. offers reliable, friendly, and safe dog walking services covering Wanstead, Leytonstone, South Woodford, Walthamstow, Hackney, and more. Flexible walks from Walks & Wags Co., happy tails, every trail!" %>
+<div class="landing-container">
+  <%= render 'shared/navbar' %>
+  <section id="section1" class="image-bg position-relative">
+    <%= image_tag "wanstead_wags.webp",
+    alt: "Happy dog in the forest",
+    class: "hero-img position-absolute w-100 h-100 object-fit-cover",
+    fetchpriority: "high",
+    decoding: "async" %>
+    <div class="ww-home-text d-flex justify-content-center align-items-center flex-column">
+      <h1 class="wanstead-wags-title wanstead-wags text-center">Walks & Wags Co.</h1>
+      <h1 class="ww-home-services font text-center">HAPPY TAILS, EVERY TRAIL</h1>
+      <%= link_to("BOOK TODAY", new_contact_form_path, class: "text-center home-button button mt-5") %>
+    </div>
+  </section>
+
+  <section id="section2" class="color-bg" style="background-color: #011712;">
+    <div class="green-background welcome-section">
+      <div class="welcome-message">
+        <h1 class="welcome wanstead-wags-title titles" style="color: #E8AFC7;">Paw-some Adventures Begin Here</h1>
+        <p class="text padding-text" style="font-size: 22px;">Whether it’s a lively stroll through nature or a serene exploration of the outdoors, we tailor every walk to suit your pup’s personality. Our goal? To keep tails wagging with a perfect mix of exercise, mental stimulation, and a whole lot of love.</p>
+      </div>
+      <div class="welcome-to-photo">
+        <%= image_tag "puppy_tugging.png", loading:"lazy", alt: "Energetic puppy tugging on a vibrant rope toy, capturing the fun, exercise, and mental stimulation of Walks & Wags Co.' tailored dog walks.", class: "photo-two" %>
+      </div>
+    </div>
+  </section>
+
+  <section id="section3" class="color-bg" style="background-color: #E8AFC7;">
+    <div class="prices-div">
+      <div class="d-flex justify-content-center flex-column align-items-center">
+        <h1 class="wanstead-wags-title titles prices text-center" style="color: #032B22;">Choose the Pawfect Service</h1>
+        <p class="price-list" style="font-family: Lato, serif, sans-serif !important;"><%= link_to "See our full price list", services_path, style: "color: #032B22;" %></p>
+      </div>
+      <div class="services">
+        <div class="d-flex align-items-center services-flex">
+          <div class="service-image-flex">
+            <%= link_to new_contact_form_path do %>
+              <%= image_tag "solo_walks.png", loading:"lazy", alt: "Golden Retriever standing upright, ready for a peaceful solo walk in nature—perfect for gentle exercise and mental stimulation.", class: "services-images" %>
+            <% end %>
+          </div>
+          <div class="d-flex flex-column align-items-center services-paragraph">
+            <h1 class="font-Abril text services-description service-name">Solo Dog Walks</h1>
+            <p class="text services-description services-font services-text">One-on-one adventures for your pup in nature – peaceful walks in the woods, fields, and lakes for gentle exercise and mental stimulation.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center services-flex">
+          <div class="service-image-flex">
+            <%= link_to new_contact_form_path do %>
+              <%= image_tag "group_walks.png", loading:"lazy", alt: "Happy group of dogs walking together, ready to enjoy a fun and social adventure in parks, fields, and woodlands.", class: "services-images" %>
+            <% end %>
+          </div>
+          <div class="d-flex flex-column align-items-center services-paragraph">
+            <h1 class="font-Abril text services-description service-name">Group Dog Walks</h1>
+            <p class="text services-description services-font services-text">Fun, social walks with 3-4 other friendly dogs! Let your dog make new friends while exploring parks, fields, and woodlands.</p>
+          </div>
+        </div>
+      <div class="d-flex justify-content-center mb-5">
+        <%= link_to("BOOK TODAY", new_contact_form_path, class: "mt-0 text-center button") %>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section4" class="color-bg" style="background-color: #EFEDE7;">
+    <div class="how-to-book">
+      <div class="booking-instructions d-flex justify-content-center align-items-center">
+        <div class="steps d-flex flex-column">
+          <h1 class="wanstead-wags-title titles prices booking-title" style="color: #032B22; margin: 0;">How To Book</h1>
+          <p class="green-text color">Booking a walk with me is quick and easy! Simply follow these steps:</p>
+          <ol>
+            <li class="green-text indent">Contact Me: Use the <%= link_to "contact form", new_contact_form_path %> on this website or email me directly at <a href="mailto:walkswagsco@gmail.com">walkswagsco@gmail.com</a>.</li>
+            <li class="green-text indent">Meet & Greet: I’ll review your details and send you a link to book a convenient time to meet in your local park or outdoor space. This helps me get to know your dog in their natural walking environment.</li>
+            <li class="green-text indent">Choose Your Service: We’ll chat about your dog’s needs, and you’ll pick the walk type and schedule that suits them best.</li>
+            <li class="green-text indent">Trial Walk & Paperwork: We’ll do a trial walk, I’ll send over a quick client form to complete, and payment details. I’ll also provide proof of my DBS check and insurance.</li>
+          </ol>
+          <p class="green-text">That’s it! I’ll take care of the rest, making sure your dog has a fun, safe, and enriching experience every time.</p>
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <h3 class="wanstead-wags-title booking-title" style="margin: 0; font-size: 2rem; color: #032B22;">Ready to book?</h3>
+            <%= link_to("BOOK TODAY", new_contact_form_path, class: "mt-0 text-center button") %>
+          </div>
+        </div>
+        <div class="d-flex flex-column doggy-picture align-items-center mt-5">
+          <%= image_tag "how-to-book-image.webp", loading:"lazy", alt: "Three dogs joyfully chasing each other in a grassy field, playing together under a bright sky.", class: "photo-three" %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section5" class="color-bg" style="background-color: #011712;">
+    <div class="blog-background">
+      <h1 class="welcome wanstead-wags-title titles d-flex justify-content-center mb-5"  style="color: rgb(64, 255, 181)">Blogs About Dogs</h1>
+      <div class="blog-posts container mt-4">
+        <div class="row">
+          <% @posts.each_with_index do |post, index| %>
+            <% if index < 4 %>
+              <div class="col-md-4 mb-4">
+                <a href="<%= blogs_post_path(post.fields[:slug]) %>" class="post-link">
+                  <div class="d-flex flex-column align-items-center">
+                    <% if post.fields[:blog_image].present? %>
+                      <% image_url = "https:" + post.fields[:blog_image].url %>
+                      <%= image_tag image_url, loading:"lazy", alt: "Featured image for the blog post: #{post.fields[:title]} - #{post.fields[:description]}", class: "blog-images" %>
+                    <% else %>
+                      <p>No image available</p>
+                    <% end %>
+                    <div class="post-description">
+                      <p class="text blogs-description"><%= post.fields[:title] %></p>
+                      <p class="text blog-text text-center"><%= post.fields[:description] %></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <%= link_to("VIEW ALL", blogs_path, class:"view-all-link") %>
+    </div>
+  </section>
+
+  <section id="section6" class="color-bg" style="background-color: #EFEDE7;">
+    <div class="how-to-book about" style="padding: 100px;">
+      <div class=" about-me d-flex justify-content-around align-items-center">
+        <div class="about-me-text d-flex flex-column">
+          <h1 class="wanstead-wags-title titles prices booking-title" style="color: #032B22; margin: 0;">About The Owner</h1>
+          <p class="green-text color"> Hi! I’m Jayden — a local dog walker based in Wanstead and a lifelong dog lover.
+With a natural love for animals and an active lifestyle, I provide safe, caring, and reliable walks tailored to your dog’s needs. I bring flexibility, energy, and genuine care to every walk — your pup is always in safe hands!</p>
+        </div>
+        <div class="d-flex flex-column about-me-photo-div">
+          <%= image_tag "about_me_image.webp", loading:"lazy", alt: "Happy dog walker smiling warmly at three dogs, showcasing a deep love for pets and a passion for dog care.", class: "about-me-photo" %>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-row justify-content-around m-5 areas-covered">
+      <div class="map-div" id="map" style="height: 600px;"></div>
+      <div class="green-text areas-list">
+      <h1 class="areas-covered-title wanstead-wags-title titles text-left" style="color: #011712">Areas Covered:</h1>
+        <ul>
+          <li><strong>London Borough of Redbridge</strong></li>
+          <ul>
+            <li>Wanstead</li>
+            <li>Snaresbrook</li>
+            <li>Aldersbrook</li>
+            <li>South Woodford</li>
+            <li>Woodford</li>
+            <li>Woodford Green</li>
+          </ul>
+
+          <li><strong>London Borough of Waltham Forest</strong></li>
+          <ul>
+            <li>Whipps Cross</li>
+            <li>Leytonstone</li>
+            <li>Leyton</li>
+            <li>Walthamstow</li>
+          </ul>
+
+          <li><strong>London Borough of Hackney</strong></li>
+          <ul>
+            <li>Upper Clapton</li>
+            <li>Hackney</li>
+          </ul>
+
+          <li><strong>London Borough of Newham</strong></li>
+          <ul>
+            <li>Stratford</li>
+            <li>Forest Gate</li>
+          </ul>
+        </ul>
+        <p class="">If your area isn't listed above, don't hesitate to get in touch with your postcode, and we'll be happy to check if you're within our catchment zone.</p>
+        <div class="enquire-button d-flex">
+          <%= link_to("ENQUIRE NOW", new_contact_form_path, class: "text-center button mt-5") %>
+        </div>
+      </div>
+    </div>
+    <div style="padding-bottom: 100px;">
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+      <div class="elfsight-app-bf909cfc-e25f-4a9a-a7c6-bf3b8b3e237c" data-elfsight-app-lazy></div>
+    </div>
+  </section>
+</div>

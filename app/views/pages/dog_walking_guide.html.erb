@@ -1,0 +1,95 @@
+<%= content_for :title, "Dog Walking Guide - Walks & Wags Co." %>
+<% content_for :meta_description, "Your in-depth guide to dog walking with Walks & Wags Co.—offering solo and group walks in East London: from Wanstead to Hackney, Leytonstone, Woodford, and beyond." %>
+<%= render 'shared/navbar' %>
+<div class="container dog_walking_guide">
+  <section id="section3" class="color-bg" style="background-color: #EFEDE7;">
+    <header class="text-center">
+      <h1 style="color: #032B22; font-family: 'Abril Fatface', serif !important">Welcome to Our Dog Walking Guide!</h1>
+      <p class="font-dog-walk-guide" class="font-dog-walk-guide">Your go-to resource for everything dog walking—tailored tips, expert advice, and insights to keep your pup happy, healthy, and active!</p>
+    </header>
+
+    <div class="py-5 dog-walk-banner">
+      <h2 style="color: #032B22; font-family: 'Abril Fatface', serif !important">Why Dog Walking is Important</h2>
+      <p class="font-dog-walk-guide">Dog walking isn’t just about getting your pup out of the house—it’s crucial for their physical health, mental stimulation, and socialisation. Here’s why:</p>
+      <ul class="font-dog-walk-guide">
+        <li><strong>Exercise:</strong> Regular walks help maintain a healthy weight and build muscle.</li>
+        <li><strong>Mental Stimulation:</strong> New environments and experiences keep your dog's mind sharp.</li>
+        <li><strong>Behavior:</strong> Consistent walks help curb unwanted behaviors like excessive barking or chewing.</li>
+        <li><strong>Bonding:</strong> Walking together strengthens the relationship between you and your dog.</li>
+      </ul>
+    </div>
+
+    <div class="py-5">
+      <h2 style="color: #032B22; font-family: 'Abril Fatface', serif !important">Our Dog Walking Services</h2>
+      <p class="font-dog-walk-guide">At Walks & Wags Co., we offer two types of walks designed to suit every dog's needs:</p>
+      <div class="row mt-3 services-dog-guide">
+        <div class="col-md-6">
+          <h3 style="color: #032B22; font-family: 'Abril Fatface', serif !important;">Solo Dog Walks</h3>
+          <p class="font-dog-walk-guide">One-on-one adventures with your pup in nature—whether it's a peaceful stroll in the woods or a fun hike in the fields. Our solo walks are tailored to provide gentle exercise and mental stimulation.</p>
+          <%= image_tag "dog_walk_guide_solo.webp", loading:"lazy", class:"w-100" %>
+          <a class="font-dog-walk-guide text-center mt-3 button" href="/services">Learn More About Solo Walks</a>
+        </div>
+        <div class="col-md-6">
+          <h3 style="color: #032B22; font-family: 'Abril Fatface', serif !important;">Group Dog Walks</h3>
+          <p class="font-dog-walk-guide">Social walks with 3-4 other friendly dogs! Let your dog make new friends while exploring local parks, fields, and woodlands. It’s a fun and safe way for your pup to socialise and exercise.</p>
+          <%= image_tag "dog_walk_guide_group.webp", loading:"lazy", class:"w-100" %>
+          <a class="font-dog-walk-guide text-center mt-3 button" href="/services">Learn More About Group Walks</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tips for a Great Walk Section -->
+    <div class="py-5">
+      <h2 style="color: #032B22; font-family: 'Abril Fatface', serif !important;">Tips for a Successful Dog Walk</h2>
+      <p class="font-dog-walk-guide">To ensure your dog enjoys the best possible walking experience, here are some useful tips:</p>
+      <ul class="font-dog-walk-guide">
+        <li><strong>Use the Right Leash:</strong> Choose a leash that is comfortable for both you and your dog.</li>
+        <li><strong>Stay Hydrated:</strong> Bring water for your dog, especially on longer walks or hot days.</li>
+        <li><strong>Use Positive Reinforcement:</strong> Reward your dog with treats or praise during and after walks.</li>
+        <li><strong>Follow the Route:</strong> Stick to familiar routes until your dog is comfortable with new ones.</li>
+      </ul>
+      <p class="font-dog-walk-guide">For more detailed walking tips, check out our <a href="/blogs/best-leashes-for-different-dog-breeds">blog post on the best leashes for different breeds</a>.</p>
+    </div>
+
+    <!-- Book Your Walk Section -->
+    <div class="py-5 text-center dog-walk-banner mt-0">
+      <h2 style="color: #032B22; font-family: 'Abril Fatface', serif !important;">Ready to Book a Walk?</h2>
+      <p class="font-dog-walk-guide">Whether you're interested in solo walks or group adventures, we’re here to help your dog get the exercise and fun they need. Click the button below to book your next walk with us!</p>
+      <a class="font-dog-walk-guide text-center mt-3 button" href="/new">Book Your Walk Today</a>
+    </div>
+
+    <div class="py-5 bg-light">
+      <h2 style="color: #032B22; font-family: 'Abril Fatface', serif !important; padding-bottom: 50px;">What Our Clients Say</h2>
+      <div class="row font-dog-walk-guide">
+        <div class="col-md-4">
+          <blockquote class="reviews">
+            <a href="https://g.co/kgs/Q81Pe4k">
+              <%= image_tag "Eddie & Hershey.webp", loading:"lazy", class: "w-100", style:"padding-bottom: 20px;" %>
+              <p class="font-dog-walk-guide">"Jayden is very reliable, friendly and the dogs love her. I feel very safe with my boys in her care. Highly recommended! Dana, Eddie and Hershey"</p>
+              <footer style="font-weight: bold;">- Dana F., Leyton</footer>
+            </a>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="reviews">
+            <a href="https://g.co/kgs/3p6v1VZ">
+              <%= image_tag "Ivor.webp", loading:"lazy", class: "w-100", style:"padding-bottom: 20px;"  %>
+              <p>"Jayden is a great walker; kind, reliable, patient and she obviously loves dogs! Whilst this is a new venture her care and professionalism is second to none. She took time to understand our dog, his needs and was careful to ensure that he would fit into the pack. Our dog seems very happy and we'd definitely recommend her."</p>
+              <footer style="font-weight: bold;">- Anya G., Leytonstone</footer>
+            </a>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="reviews">
+            <a href="https://g.co/kgs/Za6pZtw">
+              <%= image_tag "Peso.webp", loading:"lazy", class: "w-100", style:"padding-bottom: 20px;" %>
+              <p>"Jayden has been an incredible and reliable friend for our little boy, they instantly bonded.
+  Peso (🐶) loves going out with Jayden , they go on long walks in parks and forests with other dogs , sometimes even longer than initially planned, which is fantastic , as my little boy gets all the fresh air and playtime he needs. Jayden has been a real life saver for us as she responded to last minute requests from us and thanks to her we had someone looking after Peso while we were busy. Highly recommend!"</p>
+              <footer style="font-weight: bold;" >- Ola Q., Wanstead </footer>
+            </a>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
