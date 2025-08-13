@@ -3,14 +3,14 @@
 <div class="landing-container">
   <%= render 'shared/navbar' %>
   <section id="section1" class="image-bg position-relative">
-    <%= image_tag "wanstead_wags.webp",
+    <%= image_tag "walks-and-wags-landing-page-image.png",
     alt: "Happy dog in the forest",
     class: "hero-img position-absolute w-100 h-100 object-fit-cover",
     fetchpriority: "high",
     decoding: "async" %>
-    <div class="ww-home-text d-flex justify-content-center align-items-center flex-column">
-      <h1 class="wanstead-wags-title wanstead-wags text-center">Walks & Wags Co.</h1>
-      <h1 class="ww-home-services font text-center">HAPPY TAILS, EVERY TRAIL</h1>
+    <div class="ww-home-text d-flex justify-content-center align-items-start flex-column">
+      <h1 class="wanstead-wags-title wanstead-wags text-center">Tail-Wagging Adventures</h1>
+      <h1 class="ww-home-services font text-center">East London’s Friendliest Dog Walks</h1>
       <%= link_to("BOOK TODAY", new_contact_form_path, class: "text-center home-button button mt-5") %>
     </div>
   </section>
@@ -22,7 +22,7 @@
         <p class="text padding-text" style="font-size: 22px;">Whether it’s a lively stroll through nature or a serene exploration of the outdoors, we tailor every walk to suit your pup’s personality. Our goal? To keep tails wagging with a perfect mix of exercise, mental stimulation, and a whole lot of love.</p>
       </div>
       <div class="welcome-to-photo">
-        <%= image_tag "puppy_tugging.png", loading:"lazy", alt: "Energetic puppy tugging on a vibrant rope toy, capturing the fun, exercise, and mental stimulation of Walks & Wags Co.' tailored dog walks.", class: "photo-two" %>
+        <%= image_tag "Happy-Dog-Heart-Image.png", loading:"lazy", alt: "Happy dog playing in a lavendar field, capturing the fun, exercise, and mental stimulation of Walks & Wags Co.' tailored dog walks.", class: "photo-two" %>
       </div>
     </div>
   </section>
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="d-flex flex-column doggy-picture align-items-center mt-5">
-          <%= image_tag "how-to-book-image.webp", loading:"lazy", alt: "Three dogs joyfully chasing each other in a grassy field, playing together under a bright sky.", class: "photo-three" %>
+          <%= image_tag "how-to-book-image.png", loading:"lazy", alt: "Three dogs joyfully chasing each other in a grassy field, playing together under a bright sky.", class: "photo-three" %>
         </div>
       </div>
     </div>
@@ -128,7 +128,7 @@
 With a natural love for animals and an active lifestyle, I provide safe, caring, and reliable walks tailored to your dog’s needs. I bring flexibility, energy, and genuine care to every walk — your pup is always in safe hands!</p>
         </div>
         <div class="d-flex flex-column about-me-photo-div">
-          <%= image_tag "about_me_image.webp", loading:"lazy", alt: "Happy dog walker smiling warmly at three dogs, showcasing a deep love for pets and a passion for dog care.", class: "about-me-photo" %>
+          <%= image_tag "about.JPG", loading:"lazy", alt: "Happy dog walker smiling warmly at three dogs, showcasing a deep love for pets and a passion for dog care.", class: "about-me-photo" %>
         </div>
       </div>
     </div>

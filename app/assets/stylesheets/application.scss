@@ -78,12 +78,13 @@ body {
 .ww-home-text {
   z-index: 10;
   position: relative;
-  top: 55%;
+  top: 40%;
+  padding-left: 50px;
 }
 
 .image-bg {
   position: relative;
-  height: 90vh;
+  height: 97vh;
 }
 
 .font-dog-walk-guide {
@@ -277,7 +278,7 @@ body {
     "SOFT" 0,
     "WONK" 0;
   color: #FFAFDA;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .post-content {
@@ -352,7 +353,6 @@ a[href*="elfsight.com/google-reviews-widget"][target="_blank"] {
 
 .button {
   display: inline-block;
-  align-self: center;
   font-family: "Abril Fatface", serif !important;
   font-style: normal;
   text-decoration: none;
@@ -743,7 +743,7 @@ h4, .h4 {
   }
 
   .blog-background {
-    padding: 55px 20px 55px 20px;
+    padding: 20px;
   }
 
   .width-85 {
@@ -848,7 +848,7 @@ h4, .h4 {
   }
 
   .how-to-book {
-    padding: 50px 20px 20px 20px !important;
+    padding: 20px !important;
   }
 
   .booking-instructions {
@@ -874,7 +874,7 @@ h4, .h4 {
     max-width: 100%;
     width: 100%;
     margin-left: 0px;
-    padding-bottom: 20px;
+    padding-top: 20px;
   }
 
   .about-me-photo-div {
@@ -911,7 +911,7 @@ h4, .h4 {
   }
 
   .wanstead-wags-title {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin: 20px;
   }
@@ -1040,6 +1040,11 @@ h4, .h4 {
   }
   .blog-section {
     margin:0;
+  }
+
+  .ww-home-text {
+    padding: 0!important;
+    align-items: center!important;
   }
 }
 
