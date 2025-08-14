@@ -3,7 +3,7 @@
 <div class="landing-container">
   <%= render 'shared/navbar' %>
   <section id="section1" class="image-bg position-relative">
-    <%= image_tag "walks-and-wags-landing-page-image.png",
+    <%= image_tag "walks-and-wags-landing-page-image.jpg",
     alt: "Happy dog in the forest",
     class: "hero-img position-absolute w-100 h-100 object-fit-cover",
     fetchpriority: "high",
@@ -22,7 +22,7 @@
         <p class="text padding-text" style="font-size: 22px;">Whether it’s a lively stroll through nature or a serene exploration of the outdoors, we tailor every walk to suit your pup’s personality. Our goal? To keep tails wagging with a perfect mix of exercise, mental stimulation, and a whole lot of love.</p>
       </div>
       <div class="welcome-to-photo">
-        <%= image_tag "Happy-Dog-Heart-Image.png", loading:"lazy", alt: "Happy dog playing in a lavendar field, capturing the fun, exercise, and mental stimulation of Walks & Wags Co.' tailored dog walks.", class: "photo-two" %>
+        <%= image_tag "Happy-Dog-TugofWar-Image.png", loading:"lazy", alt: "Happy dogs (golden retrievers) playing in a tug of war, capturing the fun, exercise, and mental stimulation of Walks & Wags Co.' tailored dog walks.", class: "photo-two" %>
       </div>
     </div>
   </section>
@@ -31,7 +31,6 @@
     <div class="prices-div">
       <div class="d-flex justify-content-center flex-column align-items-center">
         <h1 class="wanstead-wags-title titles prices text-center" style="color: #032B22;">Choose the Pawfect Service</h1>
-        <p class="price-list" style="font-family: Lato, serif, sans-serif !important;"><%= link_to "See our full price list", services_path, style: "color: #032B22;" %></p>
       </div>
       <div class="services">
         <div class="d-flex align-items-center services-flex">
@@ -56,9 +55,12 @@
             <p class="text services-description services-font services-text">Fun, social walks with 3-4 other friendly dogs! Let your dog make new friends while exploring parks, fields, and woodlands.</p>
           </div>
         </div>
-      <div class="d-flex justify-content-center mb-5">
+      <%# <div class="d-flex justify-content-center mb-5">
         <%= link_to("BOOK TODAY", new_contact_form_path, class: "mt-0 text-center button") %>
+      <%# </div> %>
       </div>
+      <div>
+        <p class="price-list mt-3 text-center" style="font-family: Lato, serif, sans-serif !important;"><%= link_to "See our full price list", services_path, style: "color: #032B22;" %></p>
       </div>
     </div>
   </section>
@@ -94,7 +96,7 @@
       <div class="blog-posts container mt-4">
         <div class="row">
           <% @posts.each_with_index do |post, index| %>
-            <% if index < 4 %>
+            <% if index < 3 %>
               <div class="col-md-4 mb-4">
                 <a href="<%= blogs_post_path(post.fields[:slug]) %>" class="post-link">
                   <div class="d-flex flex-column align-items-center">
@@ -106,7 +108,7 @@
                     <% end %>
                     <div class="post-description">
                       <p class="text blogs-description"><%= post.fields[:title] %></p>
-                      <p class="text blog-text text-center"><%= post.fields[:description] %></p>
+                      <%# <p class="text blog-text text-center"><%= post.fields[:description] %></p>
                     </div>
                   </div>
                 </a>

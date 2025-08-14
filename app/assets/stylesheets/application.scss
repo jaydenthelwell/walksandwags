@@ -251,6 +251,9 @@ body {
   width: 100%;
   margin-left: 200px;
 }
+.doggy-picture img{
+  width: 100%;
+}
 
 .about-me-photo {
   border-radius: 50px;
@@ -383,8 +386,16 @@ a[href*="elfsight.com/google-reviews-widget"][target="_blank"] {
 
 .prices-div {
   background-color: #E8AFC7;
-  padding: 80px;
-  padding-bottom: 0;
+  padding: 80px 0;
+  padding-bottom: 60px;
+}
+
+.services-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 50px 20px;
+  flex-direction: column;
 }
 
 .green-background {
@@ -450,17 +461,15 @@ a[href*="elfsight.com/google-reviews-widget"][target="_blank"] {
 
 .services {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   margin-top: 20px;
   padding: 50px 20px;
+  flex-direction: column;
 }
 
 .service-name {
   font-family: "Abril Fatface", serif!important;
   font-weight: 700;
-  font-size: 28px
+  font-size: 28px!important;
 }
 
 .steps {
@@ -525,6 +534,7 @@ a[href*="elfsight.com/google-reviews-widget"][target="_blank"] {
   background-color: #E8AFC7;
   padding: 30px;
   margin-top: 30px;
+  border-radius: 30px;
 }
 
 .blog-images {
@@ -579,6 +589,10 @@ p {
 
 h4, .h4 {
   font-size: calc(1rem + 0.3vw);
+}
+
+.service {
+  font-size: 14px;
 }
 
 .service-image-flex {
@@ -778,7 +792,7 @@ h4, .h4 {
   }
 
   .prices-div {
-    padding: 0px;
+    padding: 60px 0;
   }
 
   .ww-home-services {
@@ -911,9 +925,8 @@ h4, .h4 {
   }
 
   .wanstead-wags-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
-    margin: 20px;
   }
 
   .green-text {
@@ -1015,10 +1028,6 @@ h4, .h4 {
 
   .contact-details {
     margin: 0;
-  }
-
-  .prices {
-    margin: 50px 10px 10px 10px;
   }
 
   .background-picture {
@@ -1420,7 +1429,7 @@ h4, .h4 {
   }
 
   .price-list {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .photo-two {
@@ -1500,30 +1509,29 @@ h4, .h4 {
   }
 }
 
-
-
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
   .logo {
     width: 100%;
   }
+
   .booking-instructions {
     flex-direction: column;
     gap: 1rem;
   }
+
   .steps {
     max-width: 100%;
   }
 }
-@media only screen and (min-width: 768px) {
-  .col-md-4 {
-    width: 25%;
+
+@media only screen and (min-width: 1100px) {
+  .logo {
+    width: 70%;
   }
+
 }
 
 @media only screen and (min-width: 1200px) {
-  .logo {
-    width: 100%;
-  }
 
   .booking-instructions {
     gap: 5rem;
@@ -1622,7 +1630,7 @@ h4, .h4 {
   }
 
   .services-div {
-    padding: 0 20px 0 20px;
+    padding: 20px 0;
   }
 
   .wanstead-wags-title {
@@ -1657,6 +1665,10 @@ h4, .h4 {
     flex-direction: column;
   }
 
+  .services-page {
+    gap: 5rem !important;
+  }
+
   .button {
     font-size: 25px;
   }
@@ -1665,6 +1677,14 @@ h4, .h4 {
     flex-direction: column;
     gap: 2rem;
   }
+
+  .services {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0 !important;
+    padding: 0;
+}
 
   .services-description {
     text-align: center;
@@ -1684,7 +1704,7 @@ h4, .h4 {
   }
 
   .service-name {
-    font-size: 45px
+    font-size: 40px
   }
 
   .price-list {
@@ -1792,7 +1812,6 @@ h4, .h4 {
 
   .services {
     padding: 0px;
-    padding-top: 60px;
     justify-content: center;
   }
 
@@ -1825,7 +1844,7 @@ h4, .h4 {
   }
 
   .how-to-book {
-    padding: 70px 50px!important;
+    padding: 30px 50px!important;
   }
 
   .about {
@@ -1877,19 +1896,23 @@ h4, .h4 {
 
   .service-page-images {
     width: 500px;
-    padding-bottom: 30px;
+    padding-top: 30px;
   }
 
   .prices-div {
-    padding: 100px 30px;
+    padding: 30px;
   }
 
   .services-font {
-    font-size: 35px;
+    font-size: 20px;
   }
 
   .green-text {
     font-size: 30px;
+  }
+
+  .services-div {
+    align-items: normal!important;
   }
 
   .steps {
@@ -1901,10 +1924,16 @@ h4, .h4 {
   }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 819px) and (-webkit-min-device-pixel-ratio: 1.5)  and (orientation: portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5)  and (orientation: portrait) {
   .sticky.table-of-contents {
     position: initial;
     align-self: initial;
+    max-width: 100%;
+  }
+
+  .services-div {
+    align-items: normal!important;
+    padding: 20px 0;
   }
 
   .post-content {
@@ -1931,11 +1960,11 @@ h4, .h4 {
 
 
   .service-name {
-    font-size: 55px
+    font-size: 50px
   }
 
   .services-font {
-    font-size: 40px;
+    font-size: 25px;
   }
 
   .photo-two {
@@ -1987,6 +2016,10 @@ h4, .h4 {
     padding: 130px 30px;
   }
 
+  .services-div {
+    align-items: normal!important;
+  }
+
   .ww-home-services {
     font-size: 20px;
   }
@@ -1997,10 +2030,6 @@ h4, .h4 {
 
   .navbar-text {
     font-size: 23px;
-  }
-
-  .services-font {
-    font-size: 40px;
   }
 
   .logo {

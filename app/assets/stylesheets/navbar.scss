@@ -27,8 +27,8 @@
 .navbar-text {
   padding-top: 0rem!important;
   padding-bottom: 0rem!important;
-  font-family: "Bellota Text", sans-serif;
-  font-weight: 300;
+  font-family: "Bellota Text", sans-serif!important;
+  font-weight: 300 !important;
   width: max-content;
 }
 
@@ -141,7 +141,7 @@
 }
 
 .navbar-email {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .options {
@@ -227,17 +227,17 @@
 
 @media only screen and (min-width: 1360px) {
   .logo {
-      width: 60%!important;
+      width: 40%!important;
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1030px) {
   .logo-div {
     width: 100%;
   }
 
   .logo {
-    width: 50%!important;
+    width: 25%!important;
   }
 
   .sidebar a {
