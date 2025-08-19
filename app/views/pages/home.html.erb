@@ -10,7 +10,7 @@
     decoding: "async" %>
     <div class="ww-home-text d-flex justify-content-center align-items-start flex-column">
       <h1 class="wanstead-wags-title wanstead-wags text-center">Tail-Wagging Adventures</h1>
-      <h1 class="ww-home-services font text-center">East London’s Friendliest Dog Walks</h1>
+      <h1 class="ww-home-services font text-center">East London’s Friendliest Dog Services</h1>
       <%= link_to("BOOK TODAY", new_contact_form_path, class: "text-center home-button button mt-5") %>
     </div>
   </section>
@@ -53,6 +53,17 @@
           <div class="d-flex flex-column align-items-center services-paragraph">
             <h1 class="font-Abril text services-description service-name">Group Dog Walks</h1>
             <p class="text services-description services-font services-text">Fun, social walks with 3-4 other friendly dogs! Let your dog make new friends while exploring parks, fields, and woodlands.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center services-flex">
+          <div class="service-image-flex">
+            <%= link_to new_contact_form_path do %>
+              <%= image_tag "overnight-sitting.png", loading:"lazy", alt: "Happy group of dogs walking together, ready to enjoy a fun and social adventure in parks, fields, and woodlands.", class: "services-images" %>
+            <% end %>
+          </div>
+          <div class="d-flex flex-column align-items-center services-paragraph">
+            <h1 class="font-Abril text services-description service-name">Overnight Dog Sitting</h1>
+            <p class="text services-description services-font services-text">A cosy overnight care service so your dog feels safe, loved, and comfortable in their own home while you’re away. Perfect for holidays, evenings out, or weekends away.</p>
           </div>
         </div>
       <%# <div class="d-flex justify-content-center mb-5">
