@@ -1,117 +1,69 @@
 <% content_for :title, "Our Dog Walking Services | Walks & Wags Co." %>
-<% content_for :meta_description, "Explore our dog walking services in East London. We offer both solo and group walks in Wanstead, Leyton, Woodford, Forest Gate, Hackney, and nearby areas. Tailored care for every pup." %>
+<% content_for :meta_description, "Explore our dog walking and sitting services in East London. Solo, group, duo walks, back-to-back sessions, overnight care, and drop-ins tailored to every pup." %>
+
 <div class="services-container">
   <%= render 'shared/navbar' %>
+
   <section id="section3" class="color-bg" style="background-color: #E8AFC7;">
     <div class="prices-div">
       <div class="d-flex justify-content-center flex-column align-items-center">
         <h1 class="wanstead-wags-title titles prices text-center" style="color: #032B22;">Choose the Pawfect Service</h1>
-        <p class="price-list text-center" style="font-family: Lato, serif, sans-serif !important;">  Choosing the right service for your dog can be tricky, but we’re here to help! Read the descriptions below to find the best option for your furry friend.</p>
+        <p class="price-list text-center" style="font-family: Lato, serif, sans-serif !important;">
+          Choosing the right service for your dog can be tricky, but we’re here to help! Read the descriptions below to find the best option for your furry friend.
+        </p>
       </div>
+
+      <% services = [
+        # Walks
+        { title: "1-Hour Group Dog Walks", price: "£17.50", description: "A fun and social experience for dogs who love companionship!", bullets: ["Small, Well-Matched Groups: Your dog will join a pack of 3-4 friendly, compatible dogs.", "Exciting Outdoor Adventures: Walks take place in parks, fields, and woodlands.", "Physical & Mental Stimulation: Group walks encourage social interaction, improve confidence, and reinforce good manners.", "Safe & Supervised: Experienced dog walkers ensure structured, enjoyable walks.", "Perfect for Social Dogs: Ideal for pups who thrive in a pack environment."] },
+        { title: "1-Hour Solo Dog Walks", price: "£25", description: "A peaceful, one-on-one walking experience tailored to your dog's unique needs.", bullets: ["Gentle & Relaxing: A quiet, stress-free walk through woodlands, fields, or lakes.", "Ideal for Anxious or Nervous Dogs: Comfortable and safe space.", "Perfect for Reactive Dogs: Controlled environment.", "Tailored to Health Needs: Suitable for older dogs or dogs recovering from injury.", "Personalised Attention: Walk adapted to your dog's pace, interests, and personality."] },
+        { title: "30-Minute Solo Dog Walks", price: "£15", description: "A short, focused walk for pups who need a quick burst of exercise.", bullets: ["Quick & Energising: Perfect for busy schedules or young puppies.", "Solo Attention: One-on-one care ensures personalised pacing.", "Mental Stimulation: Includes enrichment activities during the walk."] },
+        { title: "B2B Group Walks (2 Back-to-Back)", price: "£30", description: "Double the fun for social pups who want extra adventure!", bullets: ["Two Group Walks in a row: Extended socialisation and exercise.", "Small, compatible packs for safe interaction.", "Varied routes for mental and physical stimulation."] },
+        # Duo / Two dogs same household
+        { title: "1-Hour Group Walks – Two Dogs Same Household", price: "£30", description: "Bring both dogs from the same household for a group adventure!", bullets: ["Small group, twice the fun.", "Cost-effective for households with multiple dogs.", "Socialisation & exercise tailored for pairs."] },
+        { title: "1-Hour Solo Walks – Two Dogs Same Household", price: "£40", description: "A private, one-on-one walk for both dogs from the same home.", bullets: ["Personalised pacing for each dog.", "Peaceful environment, minimal distractions.", "Great for bonding between the pair."] },
+        { title: "30-Minute Solo Walks – Two Dogs Same Household", price: "£25", description: "Quick private walk for two dogs together.", bullets: ["Perfect for busy days.", "Individual attention while together.", "Mental stimulation included."] },
+        # Overnight / Sitting
+        { title: "Overnight Dog Sitting", price: "1 dog – £50 / 2 dogs same house – £75 / 2 dogs with midday walk – £90", description: "A cosy overnight care service so your dog feels safe, loved, and comfortable in their own home.", bullets: ["Evening & Morning Walks Included", "Familiar Environment: Dogs remain in the comfort of their own home.", "Tailored to Routine: Feeding times, medication, and bedtime habits followed carefully.", "Updates & Photos: For peace of mind while you're away.", "Daytime walks are optional and should be booked separately."] },
+        { 
+          title: "30-Minute Drop-In", 
+          price: "£15", 
+          description: "A quick daytime visit to check on your dog, provide meals, and give some company.", 
+          bullets: [
+            "Quick midday visit for meals and companionship.", 
+            "Ensures your dog is happy and comfortable during the day.", 
+            "Personalised routine followed carefully.", 
+            "Peace of mind with updates and photos."
+          ] 
+        },
+        { 
+          title: "2-Hour Evening Sit", 
+          price: "£30", 
+          description: "Extended evening care to ensure your dog feels safe and loved while you’re away.", 
+          bullets: [
+            "Evening care and supervision.", 
+            "Tailored attention to feeding, play, and settling in for the night.", 
+            "Familiar environment for comfort.", 
+            "Updates and photos for peace of mind."
+          ] 
+        }
+      ] %>
+
       <div class="services mt-0 gap-5">
-        <div class="d-flex align-items-center services-flex">
-          <div class="d-flex flex-column align-items-center services-paragraph services-div">
-            <h1 class="font-Abril text service services-description service-name">1-Hour Group Dog Walks ~ £17.50</h1>
-            <p class="text service services-description services-font services-text">
-              A fun and social experience for dogs who love companionship! Our group walks provide the perfect balance of exercise, enrichment, and socialisation.
-            </p>
-            <ul class="text service services-description services-font services-text">
-              <li><strong>Small, Well-Matched Groups:</strong> Your dog will join a pack of 3-4 friendly, compatible dogs for an engaging and stimulating walk.</li>
-              <li><strong>Exciting Outdoor Adventures:</strong> Walks take place in parks, fields, and woodlands, offering plenty of space to explore and play.</li>
-              <li><strong>Physical & Mental Stimulation:</strong> Group walks encourage social interaction, improve confidence, and reinforce good manners.</li>
-              <li><strong>Safe & Supervised:</strong> Our experienced dog walkers ensure a structured, enjoyable experience where every dog receives the attention they need.</li>
-              <li><strong>Perfect for Social Dogs:</strong> Great for pups who thrive in a pack environment and enjoy making new friends on their daily adventures.</li>
-            </ul>
-            <p class="font-Abril text service services-description service-name">
-              Two Dogs, One Household: £30 total (£15 per dog) — perfect for canine siblings!
-            </p>
-            <p class="text service services-description services-font services-text">
-              Let your dog(s) experience the joy of group walks—an excellent way to keep them happy, healthy, and engaged!
-            </p>
-            <%= link_to("ENQUIRE NOW", new_contact_form_path, class: "mt-3 text-center button") %>
+        <% services.each do |service| %>
+          <div class="d-flex align-items-center services-flex">
+            <div class="d-flex flex-column align-items-center services-paragraph services-div">
+              <h1 class="font-Abril text service services-description service-name"><%= service[:title] %> <% if service[:price] %>~ <%= service[:price] %><% end %></h1>
+              <p class="text service services-description services-font services-text"><%= service[:description] %></p>
+              <ul class="text service services-description services-font services-text">
+                <% service[:bullets].each do |bullet| %>
+                  <li><%= bullet %></li>
+                <% end %>
+              </ul>
+              <%= link_to("ENQUIRE NOW", new_contact_form_path, class: "mt-3 text-center button") %>
+            </div>
           </div>
-            <div class="service-image-flex">
-            <%= link_to new_contact_form_path do %>
-              <%= image_tag "group_walks.png", loading:"lazy", alt: "Happy group of dogs walking together, ready to enjoy a fun and social adventure in parks, fields, and woodlands.", class: "service-page-images" %>
-            <% end %>
-          </div>
-        </div>
-        <div class="d-flex align-items-center services-flex">
-          <div class="d-flex flex-column align-items-center services-paragraph services-div">
-            <h1 class="font-Abril text services-description service service-name">1-Hour Solo Dog Walks ~ £25</h1>
-            <p class="font-Abril services-description ">
-              10% off when you book daily, Monday–Friday (can also include Saturday and Sunday)
-            </p>
-            <p class="text service services-description services-font services-text">
-              A peaceful, one-on-one walking experience tailored to your dog's unique needs. These private walks allow them to explore at their own pace, free from distractions or stress.
-            </p>
-            <ul class="text service services-description services-font services-text">
-              <li><strong>Gentle & Relaxing:</strong> A quiet, stress-free walk through woodlands, fields, or along tranquil lakes, perfect for calm exploration.</li>
-              <li><strong>Ideal for Anxious or Nervous Dogs:</strong> Provides a comfortable and safe space for dogs who prefer solitude or struggle with social situations.</li>
-              <li><strong>Perfect for Reactive Dogs:</strong> A controlled environment for dogs who may be reactive to others, ensuring a relaxed and enjoyable experience.</li>
-              <li><strong>Tailored to Health Needs:</strong> Suitable for older dogs, those recovering from injury, or dogs needing a steady, low-impact walk.</li>
-              <li><strong>Personalised Attention:</strong> Your dog gets dedicated care, with the walk adapted to their pace, interests, and personality.</li>
-            </ul>
-            <p class="text services-description service services-font services-text">Whether your dog enjoys a slow stroll or a bit of adventure, our solo walks provide the perfect balance of exercise, enrichment, and relaxation.</p>
-            <%= link_to("ENQUIRE NOW", new_contact_form_path, class: "mt-3 text-center button") %>
-          </div>
-          <div class="service-image-flex">
-            <%= link_to new_contact_form_path do %>
-              <%= image_tag "solo_walks.png", loading:"lazy", alt: "Golden Retriever standing upright, ready for a peaceful solo walk in nature—perfect for gentle exercise and mental stimulation.", class: "service-page-images" %>
-            <% end %>
-          </div>
-        </div>
-        <div class="d-flex align-items-center services-flex">
-          <div class="d-flex flex-column align-items-center services-paragraph services-div">
-            <h1 class="font-Abril text services-description service service-name">Overnight Dog Sitting ~ £40 per dog / 24 hours</h1>
-            <p class="text service services-description services-font services-text">
-              A cosy overnight care service so your dog feels safe, loved, and comfortable in their own home while you’re away. Perfect for holidays, evenings out, or weekends away.
-            </p>
-            <ul class="text service services-description services-font services-text">
-              <li><strong>Familiar Environment:</strong> Dogs stay in the comfort of their own home to reduce stress and anxiety.</li>
-              <li><strong>Daily Walks Included:</strong> Enrichment and exercise as part of the sitting service.</li>
-              <li><strong>Peace of Mind:</strong> Updates and photos provided, so you know your pup is happy and settled.</li>
-              <li><strong>Tailored to Routine:</strong> Feeding times, walk preferences, and bedtime habits followed as if you were there.</li>
-            </ul>
-            <p class="text services-description service services-font services-text">
-              Whether it’s one night or several, our overnight sitting service ensures your dog feels cared for, relaxed, and happy until you return.
-            </p>
-            <%= link_to("ENQUIRE NOW", new_contact_form_path, class: "mt-3 text-center button") %>
-          </div>
-          <div class="service-image-flex">
-            <%= link_to new_contact_form_path do %>
-              <%= image_tag "overnight-sitting.png", loading:"lazy", alt: "Happy group of dogs walking together, ready to enjoy a fun and social adventure in parks, fields, and woodlands.", class: "service-page-images" %>
-            <% end %>
-          </div>
-          <%# <div class="service-image-flex">
-            <%= link_to new_contact_form_path do %>
-              <%# <%= image_tag "overnight_sitting.png", loading:"lazy", alt: "A peaceful dog resting comfortably at home during overnight sitting care.", class: "service-page-images" %>
-            <%# <% end %>
-          <%# </div> %>
-        </div>
-        <%# <div class="d-flex align-items-center services-flex">
-          <div class="d-flex flex-column align-items-center service services-paragraph services-div">
-            <h1 class="font-Abril text service services-description service-name">Run & Stimulate Package ~ £40</h1>
-            <p class="text service services-description services-font services-text">
-              Perfect for high-energy dogs that need more than just a walk! This package combines intense physical exercise with engaging mental stimulation to provide a well-rounded, satisfying experience.
-            </p>
-            <ul class="text service services-description services-font services-text">
-              <li><strong>45-Minute Run (6-8km):</strong> A fast-paced run to burn off excess energy, improve endurance, and keep your dog fit and healthy.</li>
-              <li><strong>30 Minutes of Brain Games & Training:</strong> Mental exercises, problem-solving activities, and obedience training to challenge your dog's mind and reinforce good behaviour.</li>
-              <li><strong>Perfect for High-Energy Breeds:</strong> Ideal for working breeds, sporting dogs, or any pup that needs extra stimulation beyond a regular walk.</li>
-              <li><strong>One-on-One Attention:</strong> Personalised training and enrichment to match your dog’s specific needs and learning style.</li>
-              <li><strong>Helps Prevent Destructive Behavior:</strong> A well-exercised dog is a happy, well-behaved dog—reducing boredom, restlessness, and unwanted behaviors at home.</li>
-            </ul>
-            <p class="text service services-description services-font services-text">
-              Give your dog the ultimate physical and mental workout with our Run & Stimulate Package—because some dogs just need more!
-            </p>
-          </div>
-          <div class="service-image-flex">
-            <%= link_to new_contact_form_path do %>
-              <%# <%= image_tag "run_walks.png", alt: "Photo of a dog sitting on the living room floor", class: "service-page-images" %>
-            <%# <% end %>
-          <%# </div> %>
-        <%# </div> %>
+        <% end %>
       </div>
     </div>
   </section>
