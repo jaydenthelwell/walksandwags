@@ -151,7 +151,7 @@ body {
 .services-description {
   text-align: left;
   width: 100%;
-  color: #011712;
+  color: #032B22;
   padding: 0;
 }
 
@@ -289,9 +289,6 @@ body {
   align-items: flex-start;
 }
 
-.services {
-  gap: 1rem;
-}
 
 .fa-brands {
   color: #EFEDE7;
@@ -385,8 +382,8 @@ a[href*="elfsight.com/google-reviews-widget"][target="_blank"] {
 }
 
 .prices-div {
-  background-color: #E8AFC7;
-  padding: 80px 0;
+  // background-color: #FAF7F5;
+  padding: 80px 40px;
   padding-bottom: 60px;
 }
 
@@ -464,6 +461,19 @@ a[href*="elfsight.com/google-reviews-widget"][target="_blank"] {
   margin-top: 20px;
   padding: 50px 20px;
   flex-direction: column;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  justify-content: center
 }
 
 .service-name {

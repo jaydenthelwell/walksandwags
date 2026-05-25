@@ -5,7 +5,7 @@
   <%= render 'shared/navbar' %>
 
   <section id="section3" class="color-bg" style="background-color: #E8AFC7;">
-    <div class="prices-div">
+    <div class="prices-div" style="background-color: #E8AFC7">
       <div class="d-flex justify-content-center flex-column align-items-center">
         <h1 class="wanstead-wags-title titles prices text-center" style="color: #032B22;">Choose the Pawfect Service</h1>
         <p class="price-list text-center" style="font-family: Lato, serif, sans-serif !important;">
@@ -51,7 +51,7 @@
 
       <div class="services mt-0 gap-5">
         <% services.each do |service| %>
-          <div class="d-flex align-items-center services-flex">
+          <div class="d-flex align-items-center services-flex service-card">
             <div class="d-flex flex-column align-items-center services-paragraph services-div">
               <h1 class="font-Abril text service services-description service-name"><%= service[:title] %> <% if service[:price] %>~ <%= service[:price] %><% end %></h1>
               <p class="text service services-description services-font services-text"><%= service[:description] %></p>
