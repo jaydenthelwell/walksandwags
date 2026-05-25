@@ -26,12 +26,7 @@ document.addEventListener('turbo:load', function() {
     { name: 'Whipps Cross', coords: [0.0001, 51.5815] },
     { name: 'Leytonstone', coords: [0.006519258113126995, 51.56969257331007] },
     { name: 'Leyton', coords: [-0.0140, 51.570910] },
-    { name: 'Woodford Green', coords: [0.020895381189515065, 51.609893526988145] },
-    { name: 'Woodford', coords: [0.0325, 51.6042] },
-    { name: 'Walthamstow', coords: [-0.0179, 51.5839] },
-    { name: 'Upper Clapton', coords: [-0.0542, 51.5664] },
     { name: 'Hackney', coords: [-0.0550, 51.5450] },
-    { name: 'Stratford', coords: [0.0025, 51.5416] },
     { name: 'Forest Gate', coords: [0.0261, 51.5498] }
   ];
 
